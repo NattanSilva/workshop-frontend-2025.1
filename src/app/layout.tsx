@@ -33,7 +33,7 @@ export default function RootLayout({
       lang="en"
       className={`${pressStart2P.variable} ${montserrat.variable}`}
     >
-      <body className="w-screen bg-[#ff9441]">
+      <body className="w-full bg-[#ff9441]">
         <Navbar />
         {children}
       </body>

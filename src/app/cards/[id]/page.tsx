@@ -1,7 +1,13 @@
-export default async function CardDetails({
+import { CardDetail } from "@/components/CardDetail"
+
+export default async function Details({
   params,
-}: { params: Promise<{ id: string }> }) {
+}: Readonly<{ params: Promise<{ id: string }> }>) {
   const id = (await params).id
   
-  return <div className="mt-22">CardDetails: {id}</div>
+  return (
+    <main className="w-full md:h-dvh pt-22 flex justify-center items-center">
+      <CardDetail id={id} />
+    </main>
+  )
 }
